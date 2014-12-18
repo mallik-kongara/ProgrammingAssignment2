@@ -1,9 +1,11 @@
-## Below are two functions that are used to create
-## a special object that stores a matrix and cache's
-## its inverse.
+## Below are two functions that are used to create a special object that stores
+## a matrix and cache's its inverse.
 
-## makeCacheMatrix creates a special "matrix"
-## that is really a list containing a function to:
+## For the purpose of this assignment it is assumed that the matrix supplied
+## is a square matrix (dims(n,n))
+
+## makeCacheMatrix creates a special "matrix" that is really a list containing
+## a function to:
 ## 1. set the value of the matrix
 ## 2. get the value of the matrix
 ## 3. set the inverse of the matrix
@@ -25,12 +27,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## The following function calculates the mean of the special "matrix"
-## creted with the above function. However, it first checks to see if
-## the inverse has already been calculated. If so, it gets the inverse
-## from the cache and skips the computation. Otherwise, it calculates
-## the inverse of the matrix and sets the value of the inverse in the
-## cache via the setinverse function.
+## The following function calculates the mean of the special "matrix" created
+## with the above function. However, it first checks to see if the inverse has
+## the matrix has already been calculated. If so, it gets the inverse from the
+## cache and skips the computation. Otherwise, it calculates the inverse of the
+## matrix and sets the value of the inverse in the cache via the setinverse
+## function.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
